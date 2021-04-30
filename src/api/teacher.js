@@ -13,11 +13,37 @@ export default {
             data:searchObj
         })
     },
+    //删除讲师信息
     deleteTeacherById(id){
         return request({
             url:'/eduservice/edu-teacher/'+id,
             method:'delete'
         })
-    }
+    },
 
+    //添加讲师信息
+    addTeacher(teacher){
+        return request({
+            url:'/eduservice/edu-teacher/addTeacherInfo',
+            method:'post',
+            data:teacher
+        })
+    },
+
+    //根据id查询讲师信息
+    getTeacherById(id){
+        return request({
+            url:'/eduservice/edu-teacher/getTeacherInfo/'+id,
+            method:'get'
+        })
+    },
+
+    //修改讲师信息
+    updateTeacher(teacher){
+        return request({
+            url:'/eduservice/edu-teacher/updateTeacherInfo',
+            method:'put',
+            data:teacher
+        })
+    }
 }

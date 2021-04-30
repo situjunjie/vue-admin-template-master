@@ -70,7 +70,7 @@
 
       <el-table-column label="操作" width="200" align="center">
         <template slot-scope="scope">
-          <router-link :to="'/edu/teacher/edit/'+scope.row.id">
+          <router-link :to="'/teacher/save/'+scope.row.id">
             <el-button type="primary" size="mini" icon="el-icon-edit">修改</el-button>
           </router-link>
           <el-button type="danger" size="mini" icon="el-icon-delete" @click="removeDataById(scope.row.id)">删除</el-button>
@@ -100,7 +100,7 @@ export default{
         lisLoading:true,
         list:null,//每页数据list集合
         page:1, //当前页,
-        limit:4,//每页记录数
+        limit:10,//每页记录数
         searchObj:{},
         total:0
         }

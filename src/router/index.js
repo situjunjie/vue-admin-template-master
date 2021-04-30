@@ -40,7 +40,7 @@ export const constantRouterMap = [
   {
     path: '/teacher',
     component: Layout,
-    redirect: '/teacher/table',
+    redirect: '/teacher/list',
     name: '讲师管理',
     meta: { title: '讲师管理', icon: 'example' },
     children: [
@@ -53,8 +53,15 @@ export const constantRouterMap = [
       {
         path: 'save',
         name: '添加讲师',
-        component: () => import('@/views/tree/index'),
+        component: () => import('@/views/edu/teacher/form'),
         meta: { title: '添加讲师', icon: 'tree' }
+      },
+      {
+        path: 'save/:id',
+        name: '修改讲师',
+        component: () => import('@/views/edu/teacher/form'),
+        meta: { title: '修改讲师', icon: 'tree' },
+        hidden:true
       }
     ]
   },
