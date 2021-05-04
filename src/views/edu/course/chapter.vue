@@ -21,8 +21,8 @@
 </template>
 
 <script>
-
 export default {
+  
   data() {
     return {
       saveBtnDisabled: false // 保存按钮是否禁用
@@ -36,12 +36,13 @@ export default {
   methods: {
     previous() {
       console.log('previous')
-      this.$router.push({ path: '/course/info/1' })
+      
+      this.$router.push({ path: '/course/info/'+this.$route.params.id })
     },
 
     next() {
       console.log('next')
-      this.$router.push({ path: '/course/publish/1' })
+      this.$router.push({ path: '/course/publish/'+this.$route.params.id })
     }
   }
 }
