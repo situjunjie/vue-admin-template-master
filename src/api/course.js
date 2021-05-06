@@ -32,5 +32,22 @@ export default {
             method:'put',
             data:form
         })
+    },
+
+    queryCourseList(page,limit,form){
+        return request({
+            url:'/eduservice/course/course-list/'+page+'/'+limit,
+            method:'post',
+            data:form
+        })
+    },
+
+    deleteCourseById(id){
+        return request({
+            url:'/eduservice/course/delete-course/'+id,
+            method:'delete'
+        })
     }
+
+
 }
