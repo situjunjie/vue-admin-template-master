@@ -9,7 +9,6 @@
         <el-input-number
           v-model="teacher.sort"
           controls-position="right"
-          min="0"
         />
       </el-form-item>
       <el-form-item label="讲师头衔">
@@ -98,7 +97,8 @@ export default {
       },
       BASE_API: process.env.BASE_API, // 接口API地址
       imagecropperShow: false, // 是否显示上传组件
-      imagecropperKey: 0 // 上传组件id
+      imagecropperKey: 0, // 上传组件id
+      saveBtnDisabled:false
     };
   },
   created() {

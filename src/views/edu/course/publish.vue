@@ -25,18 +25,26 @@
 export default {
   data() {
     return {
+      id:'',
       saveBtnDisabled: false // 保存按钮是否禁用
     }
   },
 
   created() {
     console.log('publish created')
+    this.init()
   },
 
   methods: {
+    init(){
+      if(this.$route.params && this.$route.params.id){
+        this.id = this.$route.params.id
+        console.log(this.$route.params.id);
+      }
+    },
     previous() {
       console.log('previous')
-      this.$router.push({ path: '/course/chapter/1' })
+      this.$router.push({ path: '/course/chapter/'+this.id })
     },
 
     publish() {
