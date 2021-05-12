@@ -47,7 +47,24 @@ export default {
             url:'/eduservice/course/delete-course/'+id,
             method:'delete'
         })
+    },
+
+    getCourseDetailById(id){
+        return request({
+            url:'/eduservice/course/getCourseDetail/'+id,
+            method:'get'
+        })
+    },
+
+    updateCoursePublish(id){
+        return request({
+            url:'/eduservice/course/updateCoursePublish/'+id,
+            method:'get'
+        })
     }
+
+
+    
 
 
 }

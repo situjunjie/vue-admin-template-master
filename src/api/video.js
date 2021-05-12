@@ -36,6 +36,13 @@ export default {
             method:'delete'
         })
     
+    },
+
+    deleteAliyunVideo(videoId){
+        return request({
+            url:'/vidservice/vod/'+videoId,
+            method:'delete'
+        })
     }
 
 
