@@ -44,7 +44,7 @@ export default {
 
     deleteCourseById(id){
         return request({
-            url:'/eduservice/course/delete-course/'+id,
+            url:'/eduservice/course/deleteCourse/'+id,
             method:'delete'
         })
     },

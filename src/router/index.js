@@ -131,6 +131,28 @@ export const constantRouterMap = [
   },
 
   {
+    path: '/statistics',
+    component: Layout,
+    redirect: '/statistics/caculate',
+    name: '统计分析',
+    meta: { title: '统计分析', icon: 'example' },
+    children: [
+      {
+        path: '/caculate',
+        name: '生成数据',
+        component: () => import('@/views/edu/statistics/caculate'),
+        meta: { title: '生成数据', icon: 'table' }
+      },
+      {
+        path: '/show',
+        name: '显示图表',
+        component: () => import('@/views/edu/statistics/show'),
+        meta: { title: '显示图表', icon: 'table' }
+      },
+    ]
+  },
+
+  {
     path: '/form',
     component: Layout,
     children: [
